@@ -1,15 +1,13 @@
 import "./App.css";
-import Clock from "./classComponents/Clock";
-import RandomEmoji from "./classComponents/RandomEmoji";
-import {default as ClockF} from "./functionalComponents/Clock";
+import Clickable from "./classComponents/Clickable";
+import ClickableF from "./functionalComponents/ClickableF";
 
 function App() {
 
   return (
     <div className="App">
-      <Clock/>
-      <RandomEmoji/>
-      <ClockF />
+      <Clickable />
+      <ClickableF />
     </div>
   );
 }
