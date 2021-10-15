@@ -1,13 +1,11 @@
 import "./App.css";
-import Clickable from "./classComponents/Clickable";
-import ClickableF from "./functionalComponents/ClickableF";
+import Input from "./functionalComponents/Input";
 
 function App() {
 
   return (
     <div className="App">
-      <Clickable />
-      <ClickableF />
+      <Input />
     </div>
   );
 }

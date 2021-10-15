@@ -13,6 +13,7 @@ function RandomEmojiF(props) {
         },1000)
 
         return () => clearInterval(timerID)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     function tick() {
