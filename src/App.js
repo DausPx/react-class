@@ -1,15 +1,14 @@
-import { useState } from "react";
 import "./App.css";
-import InputUp from "./functionalComponents/InputUp";
+import Clock from "./functionalComponents/Clock";
+import Simple from "./functionalComponents/Simple";
+
 
 function App() {
-  const [inputValue, setInputValue] = useState('')
 
   return (
     <div className="App">
-      <InputUp className='my' defaultValue={inputValue} onChange={(e)=> {
-        setInputValue(e.target.value)
-        console.log(e.target.value)}} style={{minWidth: 200, color: 'blue'}} />
+      <Simple />
+      <Clock />
     </div>
   );
 }
