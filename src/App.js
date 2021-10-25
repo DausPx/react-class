@@ -1,16 +1,24 @@
+import { useState, createContext } from "react";
 import "./App.css";
-import Clock from "./functionalComponents/Clock";
 import Simple from "./functionalComponents/Simple";
+import { getThemeFromLocalStorage } from "./util";
 
+export const AppContext = createContext({
+  theme: 'dark'
+})
 
 function App() {
+  const [theme, setTheme] = useState(getThemeFromLocalStorage() ?? 'light')
 
-  return (
+  return <>
+    <AppContext.Provider value={{
+      theme, setTheme
+    }}>
     <div className="App">
       <Simple />
-      <Clock />
     </div>
-  );
+    </AppContext.Provider>
+  </>
 }
 
 export default App;
