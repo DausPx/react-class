@@ -1,14 +1,19 @@
 
-import { useContext } from "react";
 import "./App.css";
-import { AppContext } from "./functionalComponents/Context";
 import Row from "./functionalComponents/Row";
-import Simple from "./functionalComponents/Simple";
+import List from './functionalComponents/List'
+import ListItem from './functionalComponents/ListItem'
 
 function App() {
   return <>
       <Row justify='flex-start'>
-        <Simple />
+        <List>
+          <ListItem text='Neki Tekst' hasLogo></ListItem>
+          <ListItem text='Neki Tekst' hasLogo></ListItem>
+          <ListItem text='Neki Tekst' hasLogo></ListItem>
+          <ListItem text='Neki Tekst' hasLogo></ListItem>
+          
+        </List>
       </Row>
   </>
 }
