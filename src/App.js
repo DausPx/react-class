@@ -1,24 +1,17 @@
-import { useState, createContext } from "react";
+
+import { useContext } from "react";
 import "./App.css";
+import { AppContext } from "./functionalComponents/Context";
 import Row from "./functionalComponents/Row";
 import Simple from "./functionalComponents/Simple";
-import { getThemeFromLocalStorage } from "./util";
-
-export const AppContext = createContext({
-  theme: 'dark'
-})
 
 function App() {
-  const [theme, setTheme] = useState(getThemeFromLocalStorage() ?? 'light')
-
+  const {test, setTest} = useContext(AppContext)
   return <>
-    <AppContext.Provider value={{
-      theme, setTheme
-    }}>
       <Row justify='flex-start'>
         <Simple />
+        <p>{test}</p>
       </Row>
-    </AppContext.Provider>
   </>
 }
 

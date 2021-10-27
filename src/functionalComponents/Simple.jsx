@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { AppContext } from '../App'
+import { AppContext } from './Context'
 import { setThemeToLocalStorage } from '../util'
 import './simple.css'
 
@@ -10,7 +10,6 @@ function Simple() {
         const newTheme = theme === 'light'? 'dark' : 'light'
         setThemeToLocalStorage(newTheme)
         setTheme(newTheme)
-
     }
     
     return <div className={`${theme === "dark" ? 'containerDark' : 'container'}`}>
