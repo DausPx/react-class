@@ -1,5 +1,6 @@
 import { useState, createContext } from "react";
 import "./App.css";
+import Row from "./functionalComponents/Row";
 import Simple from "./functionalComponents/Simple";
 import { getThemeFromLocalStorage } from "./util";
 
@@ -14,9 +15,9 @@ function App() {
     <AppContext.Provider value={{
       theme, setTheme
     }}>
-    <div className="App">
-      <Simple />
-    </div>
+      <Row justify='flex-start'>
+        <Simple />
+      </Row>
     </AppContext.Provider>
   </>
 }

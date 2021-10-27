@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { AppContext } from '../App'
 import { setThemeToLocalStorage } from '../util'
 import './simple.css'
+
 function Simple() {
     const {theme, setTheme} = useContext(AppContext)
 
@@ -17,4 +18,5 @@ function Simple() {
         <button onClick={onClick} className={`container ${theme === "dark" ? 'dark' : ''}`}>Click</button>
     </div>
 }
+
 export default Simple
