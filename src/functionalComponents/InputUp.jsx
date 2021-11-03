@@ -1,4 +1,3 @@
-import { useState } from "react/cjs/react.development"
 
 function InputUp({defaultValue, className, onChange, style }) {
 
